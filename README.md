@@ -4,7 +4,7 @@
 
 1. 注册微信网站应用， 拿到 appid 和 appsecret
 2. jwt_secret 通过工具随机生成
-3. 准备域名和一个 callbac url 给微信方进行回调
+3. 准备域名和一个 callback url 给微信方进行回调
 
 ## 登录流程
 
@@ -23,9 +23,11 @@ location /login_callback {
 
 ## Frontend Dependencies (前端依赖)
 
+```
 npm install axios
 npm install react
 npm install react-router-dom
+```
 
 ## Frontend Configuration （前端配置）
 
@@ -52,8 +54,10 @@ npm run build
 
 ## Backend Dependencies （后端依赖）
 
+```
 pip install fastapi uvicorn
 pip install fastapi-jwt-auth
+```
 
 ## Backend Configurations （后端配置）
 
