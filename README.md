@@ -21,6 +21,19 @@ location /login_callback {
 }
 ```
 
+## Frontend Files (前端文件说明)
+
+```
+前端文件大部分都是 create-react-app 自动生成
+只有以下几个文件是代码：
+
+1. App.js (路由)
+2. Consts.js (配置文件)
+3. LoginCallback.js (回调地址组件)
+4. ProtectedPage.js （受保护页面访问必须先登录）
+
+```
+
 ## Frontend Dependencies (前端依赖)
 
 ```
