@@ -1,3 +1,5 @@
+# 微信二维码扫码登录含前端（react）和后端（python fastapi）
+
 ## 准备工作
 
 1. 注册微信网站应用， 拿到 appid 和 appsecret
