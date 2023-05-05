@@ -18,7 +18,7 @@ const LoginCallback = () => {
     const getAccessToken = async () => {
       try {
         const response = await axios.post(URLS.CALLBACK_API, { code });
-        localStorage.setItem('accessToken', response.data.access_token);
+        localStorage.setItem('accessToken', response.data.accessToken);
         navigate(URLS.PROTECTED);
       } catch (err) {
         console.error('登录失败，请重试');

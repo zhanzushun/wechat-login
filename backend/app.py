@@ -28,7 +28,8 @@ class AuthForm(BaseModel):
     code: str
 
 class AccessToken(BaseModel):
-    access_token: str
+    accessToken: str
+    openId: str
 
 @app.post("/api/wx_login_callback", response_model=AccessToken)
 async def auth_token(form_data: AuthForm, Authorize: AuthJWT = Depends()):
@@ -45,10 +46,10 @@ async def auth_token(form_data: AuthForm, Authorize: AuthJWT = Depends()):
         raise HTTPException(status_code=400, detail=data['errmsg'])
 
     openId = data['openid']
-    access_token = Authorize.create_access_token(subject=openId)
+    accessToken = Authorize.create_access_token(subject=openId)
     userDict[openId] = openId
 
-    return {"access_token": access_token}
+    return {"accessToken": accessToken, "openId": openId}
 
 @app.get("/api/protected")
 async def protected_page(Authorize: AuthJWT = Depends()):
